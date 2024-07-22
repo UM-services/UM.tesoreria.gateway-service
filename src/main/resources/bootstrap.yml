@@ -1,5 +1,5 @@
 app:
-  port: 8094
+  port: 8091
   logging: DEBUG
 
 server:
@@ -23,14 +23,14 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: facturador-service
-          uri: lb://facturador-service
+        - id: haberes-core-service
+          uri: lb://haberes-core-service
           predicates:
-            - Path=/api/facturador/**
-        - id: factura-sender-service
-          uri: lb://factura-sender-service
+            - Path=/api/haberes/core/**
+        - id: haberes-report-service
+          uri: lb://haberes-report-service
           predicates:
-            - Path=/api/facturaSender/**
+            - Path=/api/haberes/report/**
 
 logging:
   level:
