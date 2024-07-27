@@ -31,6 +31,18 @@ spring:
           uri: lb://haberes-report-service
           predicates:
             - Path=/api/haberes/report/**
+        - id: tesoreria-core-service
+          uri: lb://tesoreria-core-service
+          predicates:
+            - Path=/api/tesoreria/core/**
+        - id: tesoreria-report-service
+          uri: lb://tesoreria-report-service
+          predicates:
+            - Path=/api/tesoreria/report/**
+        - id: pyafipws-service
+          uri: lb://pyafipws-service
+          predicates:
+            - Path=/api/afipws/**
 
 logging:
   level:
