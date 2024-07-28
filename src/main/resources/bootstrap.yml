@@ -1,6 +1,7 @@
 app:
-  port: 8091
+  port: 8080
   logging: DEBUG
+  name: gateway-service
 
 server:
   port: ${app.port}
@@ -16,7 +17,7 @@ eureka:
 
 spring:
   application:
-    name: gateway-service
+    name: ${app.name}
   cloud:
     gateway:
       discovery:
@@ -39,6 +40,10 @@ spring:
           uri: lb://tesoreria-report-service
           predicates:
             - Path=/api/tesoreria/report/**
+        - id: tesoreria-facturador-service
+          uri: lb://tesoreria-facturador-service
+          predicates:
+            - Path=/api/tesoreria/facturador/**
         - id: pyafipws-service
           uri: lb://pyafipws-service
           predicates:
