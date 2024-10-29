@@ -48,6 +48,10 @@ spring:
           uri: lb://tesoreria-sender-service
           predicates:
             - Path=/api/tesoreria/sender/**
+        - id: mercadopago-service
+          uri: lb://tesoreria-mercadopago-service
+          predicates:
+            - Path=/api/mercadopago/**
         - id: pyafipws-service
           uri: lb://pyafipws-service
           predicates:
