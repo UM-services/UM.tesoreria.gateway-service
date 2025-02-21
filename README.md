@@ -1,5 +1,7 @@
 # UM.tesoreria.gateway-service
 
+✒️ Autor: Daniel Quinteros
+
 ## Estado del CI/CD
 
 [![UM.tesoreria.gateway-service CI](https://github.com/UM-services/UM.tesoreria.gateway-service/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/UM-services/UM.tesoreria.gateway-service/actions/workflows/maven.yml)
@@ -17,9 +19,10 @@ Gateway Service para la arquitectura de microservicios de UM Tesorería. Este se
 ## Requisitos
 
 - Java 21
-- Maven 3.9+
-- Spring Boot 3.4.2
+- Maven 3.9.x o superior
+- Spring Boot 3.4.3
 - Spring Cloud 2024.0.0
+- Caffeine Cache (para producción)
 
 ## Configuración
 
@@ -29,6 +32,7 @@ El servicio se puede configurar a través del archivo `application.yml`. Las pri
 - Rutas de servicios
 - Configuraciones de seguridad
 - Políticas de balanceo de carga
+- Configuración de caché
 
 ## Documentación
 
