@@ -11,10 +11,11 @@ Gateway Service para la arquitectura de microservicios de UM Tesorería. Este se
 ## Características Principales
 
 - Enrutamiento dinámico de solicitudes
-- Balanceo de carga
+- Balanceo de carga con Eureka
 - Seguridad centralizada
 - Control y monitoreo del tráfico
 - Transformación y validación de solicitudes
+- Caché optimizado con Caffeine
 
 ## Requisitos
 
@@ -22,7 +23,7 @@ Gateway Service para la arquitectura de microservicios de UM Tesorería. Este se
 - Maven 3.9.x o superior
 - Spring Boot 3.4.3
 - Spring Cloud 2024.0.0
-- Caffeine Cache (para producción)
+- Docker (opcional, para contenedorización)
 
 ## Configuración
 
@@ -32,7 +33,7 @@ El servicio se puede configurar a través del archivo `application.yml`. Las pri
 - Rutas de servicios
 - Configuraciones de seguridad
 - Políticas de balanceo de carga
-- Configuración de caché
+- Configuración de caché con Caffeine
 
 ## Documentación
 
@@ -46,7 +47,7 @@ El servicio se puede configurar a través del archivo `application.yml`. Las pri
 
 - [Issues Activos](https://github.com/UM-services/UM.tesoreria.gateway-service/issues)
 - [Milestones](https://github.com/UM-services/UM.tesoreria.gateway-service/milestones)
-- [Historial de Cambios](https://github.com/UM-services/UM.tesoreria.gateway-service/releases)
+- [Historial de Cambios](CHANGELOG.md)
 
 ## Desarrollo
 
@@ -63,6 +64,18 @@ mvn install
 3. Ejecutar el servicio:
 ```bash
 mvn spring-boot:run
+```
+
+### Desarrollo con Docker
+
+1. Construir la imagen:
+```bash
+docker build -t um-tesoreria-gateway .
+```
+
+2. Ejecutar el contenedor:
+```bash
+docker run -p 8080:8080 um-tesoreria-gateway
 ```
 
 ## Contribuir
