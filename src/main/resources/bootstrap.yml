@@ -20,42 +20,44 @@ spring:
     name: ${app.name}
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: haberes-core-service
-          uri: lb://haberes-core-service
-          predicates:
-            - Path=/api/haberes/core/**
-        - id: haberes-report-service
-          uri: lb://haberes-report-service
-          predicates:
-            - Path=/api/haberes/report/**
-        - id: tesoreria-core-service
-          uri: lb://tesoreria-core-service
-          predicates:
-            - Path=/api/tesoreria/core/**
-        - id: tesoreria-report-service
-          uri: lb://tesoreria-report-service
-          predicates:
-            - Path=/api/tesoreria/report/**
-        - id: tesoreria-facturador-service
-          uri: lb://tesoreria-facturador-service
-          predicates:
-            - Path=/api/tesoreria/facturador/**
-        - id: tesoreria-sender-service
-          uri: lb://tesoreria-sender-service
-          predicates:
-            - Path=/api/tesoreria/sender/**
-        - id: mercadopago-service
-          uri: lb://tesoreria-mercadopago-service
-          predicates:
-            - Path=/api/tesoreria/mercadopago/**
-        - id: pyafipws-service
-          uri: lb://pyafipws-service
-          predicates:
-            - Path=/api/afipws/**
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+          routes:
+            - id: haberes-core-service
+              uri: lb://haberes-core-service
+              predicates:
+                - Path=/api/haberes/core/**
+            - id: haberes-report-service
+              uri: lb://haberes-report-service
+              predicates:
+                - Path=/api/haberes/report/**
+            - id: tesoreria-core-service
+              uri: lb://tesoreria-core-service
+              predicates:
+                - Path=/api/tesoreria/core/**
+            - id: tesoreria-report-service
+              uri: lb://tesoreria-report-service
+              predicates:
+                - Path=/api/tesoreria/report/**
+            - id: tesoreria-facturador-service
+              uri: lb://tesoreria-facturador-service
+              predicates:
+                - Path=/api/tesoreria/facturador/**
+            - id: tesoreria-sender-service
+              uri: lb://tesoreria-sender-service
+              predicates:
+                - Path=/api/tesoreria/sender/**
+            - id: mercadopago-service
+              uri: lb://tesoreria-mercadopago-service
+              predicates:
+                - Path=/api/tesoreria/mercadopago/**
+            - id: pyafipws-service
+              uri: lb://pyafipws-service
+              predicates:
+                - Path=/api/afipws/**
 
 logging:
   level:
@@ -63,6 +65,17 @@ logging:
     web: ${app.logging}
     org:
       springframework.cloud.config: ${app.logging}
+      springframework.cloud.gateway: ${app.logging}
+      springframework.web: ${app.logging}
+      springframework.http: ${app.logging}
+      springframework.web.reactive: ${app.logging}
+      springframework.web.server: ${app.logging}
+      springframework.boot.actuate: ${app.logging}
+      springframework.cloud.netflix: ${app.logging}
+      springframework.cloud.loadbalancer: ${app.logging}
+    reactor:
+      netty: ${app.logging}
+    netty: ${app.logging}
 
 management:
   endpoints:

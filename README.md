@@ -2,6 +2,12 @@
 
 ✒️ Autor: Daniel Quinteros
 
+![Java](https://img.shields.io/badge/Java-24-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.0-brightgreen)
+![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.0.0-brightgreen)
+![Maven](https://img.shields.io/badge/Maven-3.9.x-red)
+![License](https://img.shields.io/badge/License-MIT-blue)
+
 ## Estado del CI/CD
 
 [![UM.tesoreria.gateway-service CI](https://github.com/UM-services/UM.tesoreria.gateway-service/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/UM-services/UM.tesoreria.gateway-service/actions/workflows/maven.yml)
@@ -19,10 +25,10 @@ Gateway Service para la arquitectura de microservicios de UM Tesorería. Este se
 
 ## Requisitos
 
-- Java 21
+- Java 24
 - Maven 3.9.x o superior
-- Spring Boot 3.4.3
-- Spring Cloud 2024.0.0
+- Spring Boot 3.5.0
+- Spring Cloud 2025.0.0
 - Docker (opcional, para contenedorización)
 
 ## Configuración
