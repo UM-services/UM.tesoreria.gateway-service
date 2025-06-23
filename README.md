@@ -16,12 +16,27 @@ Gateway Service para la arquitectura de microservicios de UM Tesorería. Este se
 
 ## Características Principales
 
-- Enrutamiento dinámico de solicitudes
-- Balanceo de carga con Eureka
-- Seguridad centralizada
+- Enrutamiento dinámico de solicitudes a múltiples servicios
+- Balanceo de carga con Eureka Client
+- Service discovery automático
 - Control y monitoreo del tráfico
-- Transformación y validación de solicitudes
 - Caché optimizado con Caffeine
+- Documentación automática con GitHub Pages y Wiki
+- CI/CD con GitHub Actions
+
+## Servicios Enrutados
+
+El gateway enruta las siguientes rutas a sus respectivos servicios:
+
+- `/api/haberes/core/**` → haberes-core-service
+- `/api/haberes/report/**` → haberes-report-service
+- `/api/tesoreria/core/**` → tesoreria-core-service
+- `/api/tesoreria/report/**` → tesoreria-report-service
+- `/api/tesoreria/facturador/**` → tesoreria-facturador-service
+- `/api/tesoreria/sender/**` → tesoreria-sender-service
+- `/api/tesoreria/mercadopago/**` → tesoreria-mercadopago-service
+- `/api/chequera/backend/**` → tesoreria-chequera-backend
+- `/api/afipws/**` → pyafipws-service
 
 ## Requisitos
 
@@ -33,21 +48,18 @@ Gateway Service para la arquitectura de microservicios de UM Tesorería. Este se
 
 ## Configuración
 
-El servicio se puede configurar a través del archivo `application.yml`. Las principales configuraciones incluyen:
+El servicio se configura a través del archivo `bootstrap.yml`. Las principales configuraciones incluyen:
 
-- Puertos y endpoints
+- Puerto: 8080 (configurable via APP_PORT)
+- Service discovery con Eureka
 - Rutas de servicios
-- Configuraciones de seguridad
-- Políticas de balanceo de carga
-- Configuración de caché con Caffeine
+- Configuración de logging
+- Endpoints de Actuator
 
 ## Documentación
 
 - [Documentación Técnica](https://um-services.github.io/UM.tesoreria.gateway-service)
 - [Wiki del Proyecto](https://github.com/UM-services/UM.tesoreria.gateway-service/wiki)
-- [Guía de Configuración](https://um-services.github.io/UM.tesoreria.gateway-service/configuration-guide.html)
-- [Manual de Despliegue](https://um-services.github.io/UM.tesoreria.gateway-service/deployment-guide.html)
-- [Documentación de API](https://um-services.github.io/UM.tesoreria.gateway-service/api-documentation.html)
 
 ## Estado del Proyecto
 
