@@ -54,6 +54,10 @@ spring:
               uri: lb://tesoreria-mercadopago-service
               predicates:
                 - Path=/api/tesoreria/mercadopago/**
+            - id: tesoreria-chequera-backend
+              uri: lb://tesoreria-chequera-backend
+              predicates:
+                - Path=/api/chequera/backend/**
             - id: pyafipws-service
               uri: lb://pyafipws-service
               predicates:
