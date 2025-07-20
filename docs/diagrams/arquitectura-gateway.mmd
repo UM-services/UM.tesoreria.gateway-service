@@ -1,0 +1,41 @@
+graph TD
+    subgraph "Internet/Clients"
+        Client[Cliente Externo]
+    end
+
+    subgraph "DMZ / Cloud"
+        Gateway(API Gateway)
+    end
+
+    subgraph "Backend Services"
+        ServiceA[Servicio A]
+        ServiceB[Servicio B]
+        ServiceC[Servicio C]
+    end
+
+    subgraph "Service Discovery"
+        Eureka(Eureka Server)
+    end
+
+    subgraph "Configuration"
+        Config(Config Server)
+    end
+
+    Client -->|1. Request /api/a/**| Gateway
+    Gateway -->|2. Route to Service A| ServiceA
+    Gateway -->|2. Route to Service B| ServiceB
+    Gateway -->|2. Route to Service C| ServiceC
+
+    Gateway -->|Register/Discover| Eureka
+    ServiceA -->|Register/Discover| Eureka
+    ServiceB -->|Register/Discover| Eureka
+    ServiceC -->|Register/Discover| Eureka
+
+    Gateway -->|Get Config| Config
+    ServiceA -->|Get Config| Config
+    ServiceB -->|Get Config| Config
+    ServiceC -->|Get Config| Config
+
+    style Gateway fill:#f9f,stroke:#333,stroke-width:2px
+    style Eureka fill:#bbf,stroke:#333,stroke-width:2px
+    style Config fill:#fb9,stroke:#333,stroke-width:2px

@@ -3,10 +3,11 @@
 ✒️ Autor: Daniel Quinteros
 
 ![Java](https://img.shields.io/badge/Java-24-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.0-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-brightgreen)
 ![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.0.0-brightgreen)
 ![Maven](https://img.shields.io/badge/Maven-3.9.x-red)
 ![License](https://img.shields.io/badge/License-MIT-blue)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=UM-services_UM.tesoreria.gateway-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=UM-services_UM.tesoreria.gateway-service)
 
 ## Estado del CI/CD
 

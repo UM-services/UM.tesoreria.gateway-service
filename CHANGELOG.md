@@ -5,7 +5,25 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.0.1-SNAPSHOT] - Actual
+## [0.1.0] - 2025-07-20
+
+### Added
+- Added new service route for 'haberes-novedades-proxy'
+- Added SonarCloud integration for code quality analysis
+- Added comprehensive documentation with Mermaid diagrams
+- Added multi-stage Docker build for optimized images
+
+### Changed
+- Updated Spring Boot version to 3.5.3
+- Enhanced CI/CD workflow with improved GitHub Actions
+- Improved Docker security with non-root user and minimal image
+- Updated documentation generation process
+
+### Security
+- Implemented security best practices in Docker container
+- Added container vulnerability scanning in CI/CD
+
+## [0.0.1-SNAPSHOT] - 2025-07-19
 
 ### Added
 - Configuración inicial del proyecto Spring Cloud Gateway
