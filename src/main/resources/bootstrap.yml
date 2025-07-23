@@ -2,29 +2,30 @@ app:
   port: ${APP_PORT:8080}
   logging: DEBUG
   name: gateway-service
+  consul:
+    host: consul-service
+    port: 8500
 
 server:
   port: ${app.port}
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://eureka:@eureka-service:8761/eureka
 
 spring:
   application:
     name: ${app.name}
   cloud:
+    consul:
+      host: ${app.consul.host}
+      port: ${app.consul.port}
+      discovery:
+        prefer-ip-address: true
+        tags: gateway
     gateway:
       server:
         webflux:
           discovery:
             locator:
               enabled: true
+              lower-case-service-id: true
           routes:
             - id: haberes-core-service
               uri: lb://haberes-core-service
