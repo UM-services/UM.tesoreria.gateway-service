@@ -14,7 +14,7 @@ graph TD
     end
 
     subgraph "Service Discovery"
-        Eureka(Eureka Server)
+        Consul(Consul Server)
     end
 
     subgraph "Configuration"
@@ -26,10 +26,10 @@ graph TD
     Gateway -->|2. Route to Service B| ServiceB
     Gateway -->|2. Route to Service C| ServiceC
 
-    Gateway -->|Register/Discover| Eureka
-    ServiceA -->|Register/Discover| Eureka
-    ServiceB -->|Register/Discover| Eureka
-    ServiceC -->|Register/Discover| Eureka
+    Gateway -->|Register/Discover| Consul
+    ServiceA -->|Register/Discover| Consul
+    ServiceB -->|Register/Discover| Consul
+    ServiceC -->|Register/Discover| Consul
 
     Gateway -->|Get Config| Config
     ServiceA -->|Get Config| Config
@@ -37,5 +37,5 @@ graph TD
     ServiceC -->|Get Config| Config
 
     style Gateway fill:#f9f,stroke:#333,stroke-width:2px
-    style Eureka fill:#bbf,stroke:#333,stroke-width:2px
+    style Consul fill:#bbf,stroke:#333,stroke-width:2px
     style Config fill:#fb9,stroke:#333,stroke-width:2px

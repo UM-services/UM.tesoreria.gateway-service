@@ -5,6 +5,15 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-02-03
+
+### Changed
+- Updated Java version to 25 (from 24)
+- Updated Spring Boot version to 4.0.2 (from 3.5.8)
+- Updated Spring Cloud version to 2025.1.0 (from 2025.0.0)
+- Enhanced CI/CD workflow with JDK 25 support
+- Updated Dockerfile to use Eclipse Temurin 25 JRE
+
 ## [0.1.0] - 2025-07-20
 
 ### Added
