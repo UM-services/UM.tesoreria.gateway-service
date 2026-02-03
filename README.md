@@ -2,9 +2,9 @@
 
 ✒️ Autor: Daniel Quinteros
 
-![Java](https://img.shields.io/badge/Java-24-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-brightgreen)
-![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.0.0-brightgreen)
+![Java](https://img.shields.io/badge/Java-25-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.2-brightgreen)
+![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.1.0-brightgreen)
 ![Maven](https://img.shields.io/badge/Maven-3.9.x-red)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=UM-services_UM.tesoreria.gateway-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=UM-services_UM.tesoreria.gateway-service)
@@ -41,10 +41,10 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 
 ## Requisitos
 
-- Java 24
+- Java 25
 - Maven 3.9.x o superior
-- Spring Boot 3.5.0
-- Spring Cloud 2025.0.0
+- Spring Boot 4.0.2
+- Spring Cloud 2025.1.0
 - Docker (opcional, para contenedorización)
 
 ## Configuración

@@ -3,15 +3,15 @@ sequenceDiagram
     participant Gateway as API Gateway
     participant Auth as Servicio de Auth
     participant ServiceA as Servicio A
-    participant Eureka as Eureka Server
+    participant Consul as Consul Server
 
     Client->>+Gateway: GET /servicio-a/recurso
     
     Gateway->>+Auth: Validar Token
     Auth-->>-Gateway: Token Válido
 
-    Gateway->>+Eureka: Descubrir(Servicio A)
-    Eureka-->>-Gateway: service-a.url
+    Gateway->>+Consul: Descubrir(Servicio A)
+    Consul-->>-Gateway: service-a.url
 
     Gateway->>+ServiceA: GET /recurso
     ServiceA-->>-Gateway: 200 OK (Datos)
