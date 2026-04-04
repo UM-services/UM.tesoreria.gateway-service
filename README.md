@@ -3,7 +3,7 @@
 ✒️ Autor: Daniel Quinteros
 
 ![Java](https://img.shields.io/badge/Java-25-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.2-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0.5-brightgreen)
 ![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.1.0-brightgreen)
 ![Maven](https://img.shields.io/badge/Maven-3.9.x-red)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -18,8 +18,8 @@ Gateway Service para la arquitectura de microservicios de UM Tesorería. Este se
 ## Características Principales
 
 - Enrutamiento dinámico de solicitudes a múltiples servicios
-- Balanceo de carga con Eureka Client
-- Service discovery automático
+- Balanceo de carga con Consul Client
+- Service discovery automático con Consul
 - Control y monitoreo del tráfico
 - Caché optimizado con Caffeine
 - Documentación automática con GitHub Pages y Wiki
@@ -43,7 +43,7 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 
 - Java 25
 - Maven 3.9.x o superior
-- Spring Boot 4.0.2
+- Spring Boot 4.0.5
 - Spring Cloud 2025.1.0
 - Docker (opcional, para contenedorización)
 

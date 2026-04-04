@@ -5,6 +5,17 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-04-04
+
+### Changed
+- Updated Spring Boot version to 4.0.5 (from 4.0.2)
+- Updated GitHub Actions to latest versions (checkout@v6, setup-java@v5, cache@v5, deploy-pages@v5, docker actions@v4-v7)
+- Updated Maven workflow Dockerfile configuration
+
+### Technical
+- Migrated from Eureka to Consul for service discovery (from previous release)
+- Updated Java version to 25
+
 ## [0.1.1] - 2026-02-03
 
 ### Changed

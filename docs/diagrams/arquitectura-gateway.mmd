@@ -17,10 +17,6 @@ graph TD
         Consul(Consul Server)
     end
 
-    subgraph "Configuration"
-        Config(Config Server)
-    end
-
     Client -->|1. Request /api/a/**| Gateway
     Gateway -->|2. Route to Service A| ServiceA
     Gateway -->|2. Route to Service B| ServiceB
@@ -31,11 +27,5 @@ graph TD
     ServiceB -->|Register/Discover| Consul
     ServiceC -->|Register/Discover| Consul
 
-    Gateway -->|Get Config| Config
-    ServiceA -->|Get Config| Config
-    ServiceB -->|Get Config| Config
-    ServiceC -->|Get Config| Config
-
     style Gateway fill:#f9f,stroke:#333,stroke-width:2px
     style Consul fill:#bbf,stroke:#333,stroke-width:2px
-    style Config fill:#fb9,stroke:#333,stroke-width:2px
