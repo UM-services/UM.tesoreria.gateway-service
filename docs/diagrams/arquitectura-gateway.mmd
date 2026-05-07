@@ -3,29 +3,60 @@ graph TD
         Client[Cliente Externo]
     end
 
-    subgraph "DMZ / Cloud"
-        Gateway(API Gateway)
+    subgraph "Gateway Layer"
+        Gateway[API Gateway<br/>um.tesoreria.gateway-service]
     end
 
-    subgraph "Backend Services"
-        ServiceA[Servicio A]
-        ServiceB[Servicio B]
-        ServiceC[Servicio C]
+    subgraph "Backend Services - Haberes"
+        HaberesCore[haberes-core-service]
+        HaberesEtec[haberes-etec-service]
+        HaberesReport[haberes-report-service]
+        HaberesNovedades[haberes-novedades-proxy]
+    end
+
+    subgraph "Backend Services - Tesoreria"
+        TesoreriaCore[tesoreria-core-service]
+        TesoreriaReport[tesoreria-report-service]
+        TesoreriaFacturador[tesoreria-facturador-service]
+        TesoreriaSender[tesoreria-sender-service]
+        TesoreriaMP[tesoreria-mercadopago-service]
+    end
+
+    subgraph "Backend Services - Otros"
+        Chequera[tesoreria-chequera-backend]
+        Afipws[pyafipws-service]
     end
 
     subgraph "Service Discovery"
-        Consul(Consul Server)
+        Consul[Consul Server]
     end
 
-    Client -->|1. Request /api/a/**| Gateway
-    Gateway -->|2. Route to Service A| ServiceA
-    Gateway -->|2. Route to Service B| ServiceB
-    Gateway -->|2. Route to Service C| ServiceC
+    Client -->|HTTPS| Gateway
+
+    Gateway -->|/api/haberes/core/**| HaberesCore
+    Gateway -->|/api/haberes/etec/**| HaberesEtec
+    Gateway -->|/api/haberes/report/**| HaberesReport
+    Gateway -->|/api/haberes/novedades/proxy/**| HaberesNovedades
+    Gateway -->|/api/tesoreria/core/**| TesoreriaCore
+    Gateway -->|/api/tesoreria/report/**| TesoreriaReport
+    Gateway -->|/api/tesoreria/facturador/**| TesoreriaFacturador
+    Gateway -->|/api/tesoreria/sender/**| TesoreriaSender
+    Gateway -->|/api/tesoreria/mercadopago/**| TesoreriaMP
+    Gateway -->|/api/chequera/backend/**| Chequera
+    Gateway -->|/api/afipws/**| Afipws
 
     Gateway -->|Register/Discover| Consul
-    ServiceA -->|Register/Discover| Consul
-    ServiceB -->|Register/Discover| Consul
-    ServiceC -->|Register/Discover| Consul
+    HaberesCore -->|Register| Consul
+    HaberesEtec -->|Register| Consul
+    HaberesReport -->|Register| Consul
+    HaberesNovedades -->|Register| Consul
+    TesoreriaCore -->|Register| Consul
+    TesoreriaReport -->|Register| Consul
+    TesoreriaFacturador -->|Register| Consul
+    TesoreriaSender -->|Register| Consul
+    TesoreriaMP -->|Register| Consul
+    Chequera -->|Register| Consul
+    Afipws -->|Register| Consul
 
     style Gateway fill:#f9f,stroke:#333,stroke-width:2px
     style Consul fill:#bbf,stroke:#333,stroke-width:2px
