@@ -5,6 +5,19 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-05-07
+
+### Added
+- Added CORS configuration for local development and internal networks (CorsConfig.java)
+- Added new service route for 'haberes-etec-service' (`/api/haberes/etec/**`)
+
+### Changed
+- Updated Spring Boot version to 4.0.6 (from 4.0.5)
+- Updated architecture and deployment diagrams to reflect current state (removed Config-Server, updated service list)
+
+### Technical
+- Java 25, Spring Cloud 2025.1.0
+
 ## [0.1.2] - 2026-04-04
 
 ### Changed

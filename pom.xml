@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.5</version>
+		<version>4.0.6</version>
 		<relativePath/>
 		<!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>ar.edu</groupId>
 	<artifactId>um.tesoreria.gateway-service</artifactId>
-	<version>0.1.2</version>
+	<version>0.2.0</version>
 	<name>UM.tesoreria.gateway-service</name>
 	<description>Spring Boot Microservice  Gateway</description>
 	<properties>

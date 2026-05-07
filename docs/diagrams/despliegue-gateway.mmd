@@ -1,26 +1,36 @@
 graph TD
-    subgraph "Kubernetes/Docker Swarm Cluster"
+    subgraph "Docker/Cloud Infrastructure"
         direction LR
         
-        subgraph "Node 1"
-            pod1(Pod: Gateway-Service)
-            pod2(Pod: Consul-Server)
+        subgraph "Node 1 - Gateway"
+            pod1(Pod: Gateway-Service<br/>port 8080)
+            pod2(Pod: Consul-Server<br/>port 8500)
         end
 
-        subgraph "Node 2"
-            pod3(Pod: Service-A)
-            pod4(Pod: Service-B)
+        subgraph "Node 2 - Haberes Services"
+            pod3(Pod: haberes-core-service)
+            pod4(Pod: haberes-etec-service)
+            pod5(Pod: haberes-report-service)
+            pod6(Pod: haberes-novedades-proxy)
         end
 
-        subgraph "Node 3"
-            pod5(Pod: Config-Server)
+        subgraph "Node 3 - Tesoreria Services"
+            pod7(Pod: tesoreria-core-service)
+            pod8(Pod: tesoreria-report-service)
+            pod9(Pod: tesoreria-facturador-service)
+            pod10(Pod: tesoreria-sender-service)
+            pod11(Pod: tesoreria-mercadopago-service)
+        end
+
+        subgraph "Node 4 - Other Services"
+            pod12(Pod: tesoreria-chequera-backend)
+            pod13(Pod: pyafipws-service)
         end
     end
 
     subgraph "External Systems"
         lb(Load Balancer)
         db[(Database)]
-        auth[Auth Service]
     end
 
     lb --> pod1
@@ -28,10 +38,20 @@ graph TD
     pod1 --> pod3
     pod1 --> pod4
     pod1 --> pod5
+    pod1 --> pod6
+    pod1 --> pod7
+    pod1 --> pod8
+    pod1 --> pod9
+    pod1 --> pod10
+    pod1 --> pod11
+    pod1 --> pod12
+    pod1 --> pod13
     pod3 --> db
     pod4 --> db
-    pod1 --> auth
+    pod5 --> db
+    pod7 --> db
+    pod8 --> db
+    pod9 --> db
 
     style pod1 fill:#f9f,stroke:#333,stroke-width:2px
     style pod2 fill:#bbf,stroke:#333,stroke-width:2px
-    style pod5 fill:#fb9,stroke:#333,stroke-width:2px

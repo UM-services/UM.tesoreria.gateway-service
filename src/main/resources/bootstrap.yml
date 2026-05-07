@@ -31,6 +31,10 @@ spring:
               uri: lb://haberes-core-service
               predicates:
                 - Path=/api/haberes/core/**
+            - id : haberes-etec-service
+              uri: lb://haberes-etec-service
+              predicates:
+                - Path=/api/haberes/etec/**
             - id: haberes-report-service
               uri: lb://haberes-report-service
               predicates:

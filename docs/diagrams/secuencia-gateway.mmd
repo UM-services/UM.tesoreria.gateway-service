@@ -1,19 +1,15 @@
 sequenceDiagram
     participant Client as Cliente
     participant Gateway as API Gateway
-    participant Auth as Servicio de Auth
-    participant ServiceA as Servicio A
     participant Consul as Consul Server
+    participant Service as Servicio Destino
 
-    Client->>+Gateway: GET /servicio-a/recurso
+    Client->>+Gateway: GET /api/haberes/etec/recurso
     
-    Gateway->>+Auth: Validar Token
-    Auth-->>-Gateway: Token Válido
+    Gateway->>+Consul: Descubrir(haberes-etec-service)
+    Consul-->>-Gateway: service-url (192.168.x.x:port)
 
-    Gateway->>+Consul: Descubrir(Servicio A)
-    Consul-->>-Gateway: service-a.url
-
-    Gateway->>+ServiceA: GET /recurso
-    ServiceA-->>-Gateway: 200 OK (Datos)
+    Gateway->>+Service: GET /api/haberes/etec/recurso (routed)
+    Service-->>-Gateway: 200 OK (Datos)
 
     Gateway-->>-Client: 200 OK (Datos)
