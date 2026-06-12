@@ -20,6 +20,8 @@ graph TD
         TesoreriaFacturador[tesoreria-facturador-service]
         TesoreriaSender[tesoreria-sender-service]
         TesoreriaMP[tesoreria-mercadopago-service]
+        TesoreriaGuarani[tesoreria-guarani-service]
+        TesoreriaUMHub[tesoreria-umhub-service]
     end
 
     subgraph "Backend Services - Otros"
@@ -42,6 +44,8 @@ graph TD
     Gateway -->|/api/tesoreria/facturador/**| TesoreriaFacturador
     Gateway -->|/api/tesoreria/sender/**| TesoreriaSender
     Gateway -->|/api/tesoreria/mercadopago/**| TesoreriaMP
+    Gateway -->|/api/tesoreria/guarani/**| TesoreriaGuarani
+    Gateway -->|/api/tesoreria/umhub/**| TesoreriaUMHub
     Gateway -->|/api/chequera/backend/**| Chequera
     Gateway -->|/api/afipws/**| Afipws
 
@@ -55,6 +59,8 @@ graph TD
     TesoreriaFacturador -->|Register| Consul
     TesoreriaSender -->|Register| Consul
     TesoreriaMP -->|Register| Consul
+    TesoreriaGuarani -->|Register| Consul
+    TesoreriaUMHub -->|Register| Consul
     Chequera -->|Register| Consul
     Afipws -->|Register| Consul
 

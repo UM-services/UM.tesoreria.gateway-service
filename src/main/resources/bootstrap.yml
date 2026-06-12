@@ -67,6 +67,14 @@ spring:
               uri: lb://tesoreria-chequera-backend
               predicates:
                 - Path=/api/chequera/backend/**
+            - id: tesoreria-guarani-service
+              uri: lb://tesoreria-guarani-service
+              predicates:
+                - Path=/api/tesoreria/guarani/**
+            - id: tesoreria-umhub-service
+              uri: lb://tesoreria-umhub-service
+              predicates:
+                - Path=/api/tesoreria/umhub/**
             - id: pyafipws-service
               uri: lb://pyafipws-service
               predicates:
