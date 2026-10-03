@@ -11,7 +11,7 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - Corregida sintaxis de patrones CORS para redes `10.147.20.*` y `172.16.201.*` (formato HTTP y HTTPS)
 
 ### Technical
-- Java 25, Spring Boot 4.1.0, Spring Cloud 2025.1.3
+- Java 25, Spring Boot 4.1.1, Spring Cloud 2025.1.3
 
 ## [0.4.1] - 2026-08-25
 
@@ -19,7 +19,7 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - Extended CORS configuration to support `10.147.20.*` and `172.16.201.*` networks for both HTTP and HTTPS
 
 ### Technical
-- Java 25, Spring Boot 4.1.0, Spring Cloud 2025.1.3
+- Java 25, Spring Boot 4.1.1, Spring Cloud 2025.1.3
 
 ## [0.4.0] - 2026-08-24
 
@@ -31,7 +31,7 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - Renamed route ID from 'mercadopago-service' to 'tesoreria-mercadopago-service' for consistency
 
 ### Technical
-- Java 25, Spring Boot 4.1.0, Spring Cloud 2025.1.3
+- Java 25, Spring Boot 4.1.1, Spring Cloud 2025.1.3
 
 ## [0.3.0] - 2026-06-15
 
@@ -45,7 +45,7 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
 - Updated architecture and deployment diagrams with new services
 
 ### Technical
-- Java 25, Spring Boot 4.1.0, Spring Cloud 2025.1.3
+- Java 25, Spring Boot 4.1.1, Spring Cloud 2025.1.3
 
 ## [0.2.0] - 2026-05-07
 

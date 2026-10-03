@@ -3,7 +3,7 @@
 ✒️ Autor: Daniel Quinteros
 
 ![Java](https://img.shields.io/badge/Java-25-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.0-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.1-brightgreen)
 ![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.1.3-brightgreen)
 ![Maven](https://img.shields.io/badge/Maven-3.9.x-red)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -49,7 +49,7 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 
 - Java 25
 - Maven 3.9.x o superior
-- Spring Boot 4.1.0
+- Spring Boot 4.1.1
 - Spring Cloud 2025.1.3
 - Docker (opcional, para contenedorización)
 
