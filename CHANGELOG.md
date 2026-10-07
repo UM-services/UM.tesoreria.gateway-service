@@ -5,6 +5,20 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-10-07
+
+### Added
+- Added new service route for `tesoreria-compras-service` (`/api/tesoreria/compras/**` → `lb://tesoreria-compras-service`)
+
+### Changed
+- Normalized Maven coordinates to `tesoreria:gateway-service` (groupId, artifactId and name); the build `finalName` (`um.tesoreria.gateway-service`) is preserved
+
+### Security
+- The gateway now injects the `X-API-Key` header for the `tesoreria-compras-service` route via `SetRequestHeader`, configurable through `COMPRAS_API_KEY`
+
+### Technical
+- Java 25, Spring Boot 4.1.1, Spring Cloud 2025.1.3
+
 ## [0.4.2] - 2026-08-25
 
 ### Fixed

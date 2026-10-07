@@ -10,10 +10,10 @@
 		<!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>ar.edu</groupId>
-	<artifactId>um.tesoreria.gateway-service</artifactId>
-	<version>0.4.2</version>
-	<name>UM.tesoreria.gateway-service</name>
+	<groupId>tesoreria</groupId>
+	<artifactId>gateway-service</artifactId>
+	<version>0.5.0</version>
+	<name>um.tesoreria.gateway-service</name>
 	<description>Spring Boot Microservice  Gateway</description>
 	<properties>
 		<java.version>25</java.version>

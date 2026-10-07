@@ -79,6 +79,14 @@ spring:
               uri: lb://tesoreria-umhub-service
               predicates:
                 - Path=/api/tesoreria/umhub/**
+            - id: tesoreria-compras-service
+              uri: lb://tesoreria-compras-service
+              predicates:
+                - Path=/api/tesoreria/compras/**
+              filters:
+                # El navegador no tiene la API key: la fija el gateway, acotado a esta ruta nueva.
+                # SetRequestHeader (no AddRequestHeader) evita que el cliente la inyecte o duplique.
+                - SetRequestHeader=X-API-Key, ${COMPRAS_API_KEY:default-secret-key}
             - id: pyafipws-service
               uri: lb://pyafipws-service
               predicates:

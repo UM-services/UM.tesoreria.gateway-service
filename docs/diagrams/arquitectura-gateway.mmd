@@ -23,6 +23,7 @@ graph TD
         TesoreriaAura[tesoreria-aura-service]
         TesoreriaGuarani[tesoreria-guarani-service]
         TesoreriaUMHub[tesoreria-umhub-service]
+        TesoreriaCompras[tesoreria-compras-service]
     end
 
     subgraph "Backend Services - Otros"
@@ -48,6 +49,7 @@ graph TD
     Gateway -->|/api/tesoreria/aura/**| TesoreriaAura
     Gateway -->|/api/tesoreria/guarani/**| TesoreriaGuarani
     Gateway -->|/api/tesoreria/umhub/**| TesoreriaUMHub
+    Gateway -->|/api/tesoreria/compras/**| TesoreriaCompras
     Gateway -->|/api/chequera/backend/**| Chequera
     Gateway -->|/api/afipws/**| Afipws
 
@@ -64,6 +66,7 @@ graph TD
     TesoreriaAura -->|Register| Consul
     TesoreriaGuarani -->|Register| Consul
     TesoreriaUMHub -->|Register| Consul
+    TesoreriaCompras -->|Register| Consul
     Chequera -->|Register| Consul
     Afipws -->|Register| Consul
 
