@@ -5,6 +5,14 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2026-10-19
+
+### Changed
+- The staging deployment workflow now deploys to both `staging` and `staging-new` environments through a matrix, using the self-hosted runner labeled for each environment (`fail-fast: false`)
+
+### Technical
+- Java 25, Spring Boot 4.1.1, Spring Cloud 2025.1.3
+
 ## [0.5.0] - 2026-10-07
 
 ### Added
