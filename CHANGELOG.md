@@ -5,6 +5,15 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1] - 2026-10-21
+
+### Changed
+- El descubrimiento vía Consul ahora rutea únicamente a instancias con checks en estado `passing` (`query-passing: true`), descartando registros muertos
+- El health check registrado usa `/actuator/health/readiness` (sin dependencias) y poda la instancia si permanece crítica durante `5m` (`health-check-critical-timeout`)
+
+### Technical
+- Java 25, Spring Boot 4.1.1, Spring Cloud 2025.1.3
+
 ## [0.6.0] - 2026-10-19
 
 ### Changed
