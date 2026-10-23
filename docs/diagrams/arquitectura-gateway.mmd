@@ -11,7 +11,6 @@ graph TD
         HaberesCore[haberes-core-service]
         HaberesEtec[haberes-etec-service]
         HaberesReport[haberes-report-service]
-        HaberesNovedades[haberes-novedades-proxy]
     end
 
     subgraph "Backend Services - Tesoreria"
@@ -40,7 +39,6 @@ graph TD
     Gateway -->|/api/haberes/core/**| HaberesCore
     Gateway -->|/api/haberes/etec/**| HaberesEtec
     Gateway -->|/api/haberes/report/**| HaberesReport
-    Gateway -->|/api/haberes/novedades/proxy/**| HaberesNovedades
     Gateway -->|/api/tesoreria/core/**| TesoreriaCore
     Gateway -->|/api/tesoreria/report/**| TesoreriaReport
     Gateway -->|/api/tesoreria/facturador/**| TesoreriaFacturador
@@ -57,7 +55,6 @@ graph TD
     HaberesCore -->|Register| Consul
     HaberesEtec -->|Register| Consul
     HaberesReport -->|Register| Consul
-    HaberesNovedades -->|Register| Consul
     TesoreriaCore -->|Register| Consul
     TesoreriaReport -->|Register| Consul
     TesoreriaFacturador -->|Register| Consul
