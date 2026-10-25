@@ -36,10 +36,18 @@ spring:
               uri: lb://haberes-core-service
               predicates:
                 - Path=/api/haberes/core/**
-            - id : haberes-etec-service
+            - id: haberes-etec-service
               uri: lb://haberes-etec-service
               predicates:
                 - Path=/api/haberes/etec/**
+            - id: haberes-report-ui-service
+              uri: lb://haberes-report-service
+              predicates:
+                - Path=/api/haberes/report/ui/**
+              filters:
+                # Namespace exclusivo del frontend: el navegador no tiene la API key, la fija
+                # el gateway. SetRequestHeader evita que el cliente la inyecte o duplique.
+                - SetRequestHeader=X-API-Key, ${HABERES_REPORT_API_KEY:default-secret-key}
             - id: haberes-report-service
               uri: lb://haberes-report-service
               predicates:
