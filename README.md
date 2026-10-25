@@ -32,6 +32,7 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 
 - `/api/haberes/core/**` → haberes-core-service
 - `/api/haberes/etec/**` → haberes-etec-service
+- `/api/haberes/report/ui/**` → haberes-report-service (el gateway inyecta `X-API-Key`)
 - `/api/haberes/report/**` → haberes-report-service
 - `/api/tesoreria/core/**` → tesoreria-core-service
 - `/api/tesoreria/report/**` → tesoreria-report-service
