@@ -42,6 +42,7 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 - `/api/tesoreria/mercadopago/**` → tesoreria-mercadopago-service
 - `/api/tesoreria/aura/**` → tesoreria-aura-service
 - `/api/tesoreria/guarani/**` → tesoreria-guarani-service
+- `/api/tesoreria/auditoria/**` → tesoreria-auditoria-service
 - `/api/tesoreria/umhub/**` → tesoreria-umhub-service
 - `/api/tesoreria/compras/**` → tesoreria-compras-service
 - `/api/chequera/backend/**` → tesoreria-chequera-backend

@@ -88,6 +88,10 @@ spring:
               uri: lb://tesoreria-guarani-service
               predicates:
                 - Path=/api/tesoreria/guarani/**
+            - id: tesoreria-auditoria-service
+              uri: lb://tesoreria-auditoria-service
+              predicates:
+                - Path=/api/tesoreria/auditoria/**
             - id: tesoreria-umhub-service
               uri: lb://tesoreria-umhub-service
               predicates:
