@@ -22,6 +22,7 @@ graph TD
         TesoreriaMP[tesoreria-mercadopago-service]
         TesoreriaAura[tesoreria-aura-service]
         TesoreriaGuarani[tesoreria-guarani-service]
+        TesoreriaAuditoria[tesoreria-auditoria-service]
         TesoreriaUMHub[tesoreria-umhub-service]
         TesoreriaCompras[tesoreria-compras-service]
     end
@@ -49,6 +50,7 @@ graph TD
     Gateway -->|/api/tesoreria/mercadopago/**| TesoreriaMP
     Gateway -->|/api/tesoreria/aura/**| TesoreriaAura
     Gateway -->|/api/tesoreria/guarani/**| TesoreriaGuarani
+    Gateway -->|/api/tesoreria/auditoria/**| TesoreriaAuditoria
     Gateway -->|/api/tesoreria/umhub/**| TesoreriaUMHub
     Gateway -->|/api/tesoreria/compras/**| TesoreriaCompras
     Gateway -->|/api/chequera/backend/**| Chequera
@@ -66,6 +68,7 @@ graph TD
     TesoreriaMP -->|Register| Consul
     TesoreriaAura -->|Register| Consul
     TesoreriaGuarani -->|Register| Consul
+    TesoreriaAuditoria -->|Register| Consul
     TesoreriaUMHub -->|Register| Consul
     TesoreriaCompras -->|Register| Consul
     Chequera -->|Register| Consul

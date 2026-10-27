@@ -5,6 +5,16 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.0] - 2026-10-27
+
+### Added
+- Ruta `tesoreria-auditoria-service` (`/api/tesoreria/auditoria/**` → `lb://tesoreria-auditoria-service`)
+  en la configuración del gateway. Se declara después de la ruta de `tesoreria-guarani` y
+  no aplica filtros ni cabeceras adicionales.
+
+### Technical
+- Java 25, Spring Boot 4.1.2, Spring Cloud 2025.1.4
+
 ## [0.9.0] - 2026-10-26
 
 ### Added
