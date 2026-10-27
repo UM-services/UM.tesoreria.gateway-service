@@ -11,6 +11,7 @@ graph TD
             pod3(Pod: haberes-core-service)
             pod4(Pod: haberes-etec-service)
             pod5(Pod: haberes-report-service)
+            pod18(Pod: haberes-auditoria-service)
         end
 
         subgraph "Node 3 - Tesoreria Services"
@@ -41,6 +42,7 @@ graph TD
     pod1 --> pod3
     pod1 --> pod4
     pod1 --> pod5
+    pod1 --> pod18
     pod1 --> pod7
     pod1 --> pod8
     pod1 --> pod9

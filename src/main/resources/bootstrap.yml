@@ -52,6 +52,10 @@ spring:
               uri: lb://haberes-report-service
               predicates:
                 - Path=/api/haberes/report/**
+            - id: haberes-auditoria-service
+              uri: lb://haberes-auditoria-service
+              predicates:
+                - Path=/api/haberes/auditoria/**
             - id: tesoreria-core-service
               uri: lb://tesoreria-core-service
               predicates:
