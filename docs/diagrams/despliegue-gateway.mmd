@@ -11,7 +11,7 @@ graph TD
             pod3(Pod: haberes-core-service)
             pod4(Pod: haberes-etec-service)
             pod5(Pod: haberes-report-service)
-            pod6(Pod: haberes-novedades-proxy)
+            pod18(Pod: haberes-auditoria-service)
         end
 
         subgraph "Node 3 - Tesoreria Services"
@@ -22,6 +22,7 @@ graph TD
             pod11(Pod: tesoreria-mercadopago-service)
             pod16(Pod: tesoreria-aura-service)
             pod14(Pod: tesoreria-guarani-service)
+            pod19(Pod: tesoreria-auditoria-service)
             pod15(Pod: tesoreria-umhub-service)
             pod17(Pod: tesoreria-compras-service)
         end
@@ -42,7 +43,7 @@ graph TD
     pod1 --> pod3
     pod1 --> pod4
     pod1 --> pod5
-    pod1 --> pod6
+    pod1 --> pod18
     pod1 --> pod7
     pod1 --> pod8
     pod1 --> pod9
@@ -50,6 +51,7 @@ graph TD
     pod1 --> pod11
     pod1 --> pod16
     pod1 --> pod14
+    pod1 --> pod19
     pod1 --> pod15
     pod1 --> pod17
     pod1 --> pod12

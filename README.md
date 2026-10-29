@@ -3,8 +3,8 @@
 ✒️ Autor: Daniel Quinteros
 
 ![Java](https://img.shields.io/badge/Java-25-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.1-brightgreen)
-![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.1.3-brightgreen)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.2-brightgreen)
+![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-2025.1.4-brightgreen)
 ![Maven](https://img.shields.io/badge/Maven-3.9.x-red)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=UM-services_UM.tesoreria.gateway-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=UM-services_UM.tesoreria.gateway-service)
@@ -32,8 +32,9 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 
 - `/api/haberes/core/**` → haberes-core-service
 - `/api/haberes/etec/**` → haberes-etec-service
+- `/api/haberes/report/ui/**` → haberes-report-service (el gateway inyecta `X-API-Key`)
 - `/api/haberes/report/**` → haberes-report-service
-- `/api/haberes/novedades/proxy/**` → haberes-novedades-proxy
+- `/api/haberes/auditoria/**` → haberes-auditoria-service
 - `/api/tesoreria/core/**` → tesoreria-core-service
 - `/api/tesoreria/report/**` → tesoreria-report-service
 - `/api/tesoreria/facturador/**` → tesoreria-facturador-service
@@ -41,6 +42,7 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 - `/api/tesoreria/mercadopago/**` → tesoreria-mercadopago-service
 - `/api/tesoreria/aura/**` → tesoreria-aura-service
 - `/api/tesoreria/guarani/**` → tesoreria-guarani-service
+- `/api/tesoreria/auditoria/**` → tesoreria-auditoria-service
 - `/api/tesoreria/umhub/**` → tesoreria-umhub-service
 - `/api/tesoreria/compras/**` → tesoreria-compras-service
 - `/api/chequera/backend/**` → tesoreria-chequera-backend
@@ -50,8 +52,8 @@ El gateway enruta las siguientes rutas a sus respectivos servicios:
 
 - Java 25
 - Maven 3.9.x o superior
-- Spring Boot 4.1.1
-- Spring Cloud 2025.1.3
+- Spring Boot 4.1.2
+- Spring Cloud 2025.1.4
 - Docker (opcional, para contenedorización)
 
 ## Configuración

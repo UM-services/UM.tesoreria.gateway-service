@@ -11,7 +11,7 @@ graph TD
         HaberesCore[haberes-core-service]
         HaberesEtec[haberes-etec-service]
         HaberesReport[haberes-report-service]
-        HaberesNovedades[haberes-novedades-proxy]
+        HaberesAuditoria[haberes-auditoria-service]
     end
 
     subgraph "Backend Services - Tesoreria"
@@ -22,6 +22,7 @@ graph TD
         TesoreriaMP[tesoreria-mercadopago-service]
         TesoreriaAura[tesoreria-aura-service]
         TesoreriaGuarani[tesoreria-guarani-service]
+        TesoreriaAuditoria[tesoreria-auditoria-service]
         TesoreriaUMHub[tesoreria-umhub-service]
         TesoreriaCompras[tesoreria-compras-service]
     end
@@ -39,8 +40,9 @@ graph TD
 
     Gateway -->|/api/haberes/core/**| HaberesCore
     Gateway -->|/api/haberes/etec/**| HaberesEtec
+    Gateway -->|/api/haberes/report/ui/**| HaberesReport
     Gateway -->|/api/haberes/report/**| HaberesReport
-    Gateway -->|/api/haberes/novedades/proxy/**| HaberesNovedades
+    Gateway -->|/api/haberes/auditoria/**| HaberesAuditoria
     Gateway -->|/api/tesoreria/core/**| TesoreriaCore
     Gateway -->|/api/tesoreria/report/**| TesoreriaReport
     Gateway -->|/api/tesoreria/facturador/**| TesoreriaFacturador
@@ -48,6 +50,7 @@ graph TD
     Gateway -->|/api/tesoreria/mercadopago/**| TesoreriaMP
     Gateway -->|/api/tesoreria/aura/**| TesoreriaAura
     Gateway -->|/api/tesoreria/guarani/**| TesoreriaGuarani
+    Gateway -->|/api/tesoreria/auditoria/**| TesoreriaAuditoria
     Gateway -->|/api/tesoreria/umhub/**| TesoreriaUMHub
     Gateway -->|/api/tesoreria/compras/**| TesoreriaCompras
     Gateway -->|/api/chequera/backend/**| Chequera
@@ -57,7 +60,7 @@ graph TD
     HaberesCore -->|Register| Consul
     HaberesEtec -->|Register| Consul
     HaberesReport -->|Register| Consul
-    HaberesNovedades -->|Register| Consul
+    HaberesAuditoria -->|Register| Consul
     TesoreriaCore -->|Register| Consul
     TesoreriaReport -->|Register| Consul
     TesoreriaFacturador -->|Register| Consul
@@ -65,6 +68,7 @@ graph TD
     TesoreriaMP -->|Register| Consul
     TesoreriaAura -->|Register| Consul
     TesoreriaGuarani -->|Register| Consul
+    TesoreriaAuditoria -->|Register| Consul
     TesoreriaUMHub -->|Register| Consul
     TesoreriaCompras -->|Register| Consul
     Chequera -->|Register| Consul
